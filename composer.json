@@ -1,0 +1,15 @@
+{
+    "name": "amine/smsadapter",
+    "authors": [
+        {
+            "name": "Amine MBARKI",
+            "email": "aminembarki@gmail.com"
+        }
+    ],
+    "require": {
+        "prawnsalad/nexmo": "dev-master",
+        "plivo/plivo-php": "dev-master",
+        "twilio/sdk": "~3.12",
+        "arcturial/clickatell": "~2.0"
+    }
+}
