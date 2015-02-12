@@ -28,6 +28,9 @@
     },
     "autoload": {
         "psr-0": {"Smsadapter": "src/"},
-        "classmap": ["vendor/prawnsalad/nexmo/src/NexmoMessage.php"]
+        "classmap": [
+            "vendor/prawnsalad/nexmo/src/NexmoMessage.php",
+            "vendor/twilio/sdk/Services/Twilio.php"
+        ]
     }
 }
