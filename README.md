@@ -1,19 +1,7 @@
-# smsadapter
-SMS Adapter
+SmsAdpater
+=========
 
+SmsAdpater is a PHP5 library that provides a sms provider abstraction layer.
 
-// creating a post and posting to Twitter, Instagram or Facebook
-$post = new Post();
+This project is under intensive development but we do not want to break BC.
 
-// if want to use Twitter
-$post->setServiceAdapter(new TwitterService()); // OR
-
-// if want to use Instagram
-$post->setServiceAdapter(new InstagramService()); // OR maybe
-
-// if want to use Facebook or another social network adapter
-$post->setServiceAdapter(new FacebookService());
-
-$post->description = 'My first post to Twitter. Just for fun!';
-$post->url = 'http://juniorgrossi.com';
-$post->send();
