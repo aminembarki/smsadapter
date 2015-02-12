@@ -1,5 +1,16 @@
 {
-    "name": "amine/smsadapter",
+    "name": "aminembarki/smsadapter",
+    "type": "library",
+    "description": "PHP5 library that provides a sms abstraction layer",
+    "keywords": [
+        "sms",
+        "sms provider",
+        "media",
+        "abstraction"
+    ],
+    "minimum-stability": "dev",
+    "homepage": "http://ambnetwork.net",
+    "license": "MIT",
     "authors": [
         {
             "name": "Amine MBARKI",
@@ -7,9 +18,16 @@
         }
     ],
     "require": {
+    "php": ">=5.3.2"
+    },
+    "require-dev": {
         "prawnsalad/nexmo": "dev-master",
         "plivo/plivo-php": "dev-master",
         "twilio/sdk": "~3.12",
         "arcturial/clickatell": "~2.0"
+    },
+    "autoload": {
+        "psr-0": {"Smsadapter": "src/"},
+        "classmap": ["vendor/prawnsalad/nexmo/src/NexmoMessage.php"]
     }
 }
