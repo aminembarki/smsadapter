@@ -26,7 +26,7 @@ Try it!
 Development version:
 
 ```bash
-php composer.phar require aminembarki/smsadapter:0.1.*@dev
+php composer.phar require aminembarki/smsadapter:dev-master
 ```
 
 ### Setup your Smsadapter

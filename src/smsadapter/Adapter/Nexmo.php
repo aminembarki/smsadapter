@@ -7,9 +7,12 @@
  */
 
 
+
 namespace Smsadapter\Adapter;
 
-use NexmoMessage;
+
+use Headzoo\Nexmo\Exception\Exception;
+use Headzoo\Nexmo\Sms;
 use Smsadapter\Adapter;
 
 class Nexmo implements Adapter
@@ -24,12 +27,17 @@ class Nexmo implements Adapter
 
     public function authenticate(array $options)
     {
-        $this->service = new NexmoMessage($options['api_key'], $options['api_secret']);
+        $this->service = Sms::factory($options['api_key'], $options['api_secret'] , null);
 
     }
 
     public function sendMessage($to, $from, $message, $unicode = null)
     {
-        $this->service->sendText($to, $from, $message);
+        try {
+            $this->service->setFrom($from);
+            return $this->service->text($to, $message);
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
     }
 } 
