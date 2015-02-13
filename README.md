@@ -41,7 +41,7 @@ use Smsadapter\Sms;
 use Smsadapter\Adapter\Twilio As TwilioAdapter ;
 
 $sms = new Sms();
-$sms->setSmsAdapter(new Twilio());
+$sms->setSmsAdapter(new TwilioAdapter());
 $sms->authenticate(array('api_key'=>'xxxxxxxxxxx','api_secret'=>'xxxxxxxxxxx'));
 $sms->sendMessage('xxxxxxxxxxx','xxxxxxxxxxx',"message sent from sms adapter Twilio Provider ");
 ```
