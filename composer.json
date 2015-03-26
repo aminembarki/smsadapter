@@ -20,7 +20,7 @@
     "require": {
         "php": ">=5.3.2",
         "headzoo/nexmo": "*",
-        "plivo/plivo-php": "*",
+        "plivo/plivo-php": "dev-master",
         "twilio/sdk": "~3.12",
         "arcturial/clickatell": "~2.0"
     },
